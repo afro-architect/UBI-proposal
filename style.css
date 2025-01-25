@@ -103,7 +103,7 @@ body {
   border-top: none;
 }
 .tabcontent.active {
-  display: block;
+  display: block;}
 
 /* Assessment tabs SC ends */
 
