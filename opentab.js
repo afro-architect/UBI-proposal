@@ -2,17 +2,12 @@ function opentab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.remove("active");
+    tabcontent[i].style.display = "none";
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove("active");
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(tabName).classList.add("active");
-  evt.currentTarget.classList.add("active");
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
-
-// Set the first tab as active by default
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector(".tablinks").click();
-});
