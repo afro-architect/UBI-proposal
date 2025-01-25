@@ -102,6 +102,8 @@ body {
   border: 0px solid #ccc;
   border-top: none;
 }
+.tabcontent.active {
+  display: block;
 
 /* Assessment tabs SC ends */
 
@@ -142,3 +144,4 @@ body {
 }
 
 /* info cards SC ends */
+
